@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  background-color: #c6b300;
+   }
+   input,span{
+      font-size: 20px;
+   }
+  . container{
+   display: flex;
+   justify-content: center;
+   align-height: 100px;
+   background-color: #4f5d73;
+   }
+   .content-box{
+   width: 400px;
+   height:450px;
+   background-color:#7f7200;
+   overflow: hidden;
+   border-radius: 10px;
+   position:relative;
+   }
+   
+   
+</style>
+</head>
+<body><center><br><br>
+
+
+<div class ="container">
+<div class="content-box">
+
+
+<br><br><br>
+
+<h1>Temperature Converter</h1>
+<br>
+<p>
+<label>Celcius  :</label>
+
+<input id="inputKG" type="number" placeholder="Celcius"
+oninput="CtoFConverter(this.value)" onchange="CtoFConverter(this.value)">
+</p>
+<p>
+
+<label>Fahrenheit:</label>
+<input id="inputKG" type="number" placeholder="Fahrenheit"
+oninput="FtoCConverter(this.value)" onchange="FtoCConverter(this.value)">
+</p>
+
+
+
+<p>&nbsp Celcius: <span class="celcius"></span></p>
+
+
+<p>&nbsp Fahrenheit: <span class="fahrenheit"></span></p>
+
+
+<script>
+   function CtoFConverter(temp) {
+      document.querySelector(".fahrenheit").innerHTML=(temp-32)/1.8;
+   }
+   
+   
+   function FtoCConverter(temp) {
+      document.querySelector(".celcius").innerHTML=(temp-18)/32; 
+	  }
+   
+</script></center></div>
+</div>
+</body>
+</html>
