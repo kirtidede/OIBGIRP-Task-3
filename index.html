@@ -1,75 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-   body{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	  background-color: #c6b300;
-   }
-   input,span{
-      font-size: 20px;
-   }
-  . container{
-   display: flex;
-   justify-content: center;
-   align-height: 100px;
-   background-color: #4f5d73;
-   }
-   .content-box{
-   width: 400px;
-   height:450px;
-   background-color:#7f7200;
-   overflow: hidden;
-   border-radius: 10px;
-   position:relative;
-   }
-   
-   
-</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Style.css">
+
 </head>
-<body><center><br><br>
 
+<body>
 
-<div class ="container">
-<div class="content-box">
+<form id="frm" onsubmit="calculateTmp(); return false">     
 
-
-<br><br><br>
-
-<h1>Temperature Converter</h1>
-<br>
-<p>
-<label>Celcius  :</label>
-
-<input id="inputKG" type="number" placeholder="Celcius"
-oninput="CtoFConverter(this.value)" onchange="CtoFConverter(this.value)">
-</p>
-<p>
-
-<label>Fahrenheit:</label>
-<input id="inputKG" type="number" placeholder="Fahrenheit"
-oninput="FtoCConverter(this.value)" onchange="FtoCConverter(this.value)">
-</p>
-
-
-
-<p>&nbsp Celcius: <span class="celcius"></span></p>
-
-
-<p>&nbsp Fahrenheit: <span class="fahrenheit"></span></p>
-
-
-<script>
-   function CtoFConverter(temp) {
-      document.querySelector(".fahrenheit").innerHTML=(temp-32)/1.8;
-   }
+    <label for="tmp">  Temperature converter </label> <br/> 
+    Enter:
+    <input type="number" name="tmp" id="tmp">
    
-   
-   function FtoCConverter(temp) {
-      document.querySelector(".celcius").innerHTML=(temp-18)/32; 
-	  }
-   
-</script></center></div>
-</div>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    <select name="diff" id="diff">
+    
+    <option value="cel">Celsius</option>
+    
+    <option value="fah">Fahrenheit</option>
+    
+    </select> <br />
+    
+    <input type="submit" name="tmp"> <br />
+    
+    <span id="resultContainer"></span>
+
+    
+    
+    </form>
+
+<script src="Script.js"></script>
+
+
 </body>
+
 </html>
